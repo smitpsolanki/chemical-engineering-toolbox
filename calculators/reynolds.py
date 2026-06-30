@@ -1,32 +1,37 @@
+FLUIDS = {
+        "1": {
+            "name": "water",
+            "density": 1000,
+            "viscosity": 0.001
+        },
+        "2": {
+            "name": "air",
+            "density": 1.225,
+            "viscosity": 0.000018
+        },
+        "3": {
+            "name": "oil",
+            "density": 850,
+            "viscosity": 0.1
+        }
+    }
 def reynolds_calculator():
     print("\nReynolds Number Calculator")
     print("1. Water\n2. Air\n3. Oil\n4. Custom Fluid")
     fluid=input("\nEnter the fluid name (1-4): ").lower().strip()
-    match fluid:
-        case "1":
-            density=1000
-            viscosity=0.001 
-        case "2":
-            density=1.225
-            viscosity=0.000018
-        case "3":
-            density=850
-            viscosity=0.1
-        case "4":
-            density=float(input("Enter the density of the fluid (kg/m^3): "))
-            viscosity=float(input("Enter the viscosity of the fluid (Pa·s): "))
-        case _:
-            print("Invalid fluid name. Please enter '1', '2', '3', or '4'.")
-            return
-    if fluid == "1":
-        fluid = "water"
-    elif fluid == "2":      
-        fluid = "air"
-    elif fluid == "3":
-        fluid = "oil" 
+    if fluid in FLUIDS:
+        selected=FLUIDS[fluid]
+        name=selected["name"]
+        density=selected["density"]
+        viscosity=selected["viscosity"]
+    elif fluid == "4":
+        name="Custom Fluid"
+        density=float(input("Enter the density of the fluid (kg/m^3): "))
+        viscosity=float(input("Enter the viscosity of the fluid (Pa·s): "))
     else:
-        fluid = "custom fluid"      
-    print(f"\nSelected Fluid: {fluid.capitalize()}")
+        print("Invalid fluid name. Please enter '1', '2', '3', or '4'.")
+        return     
+    print("\nSelected fluid:", name)
     print(f"\nDensity: {density} kg/m^3")
     print(f"\nViscosity: {viscosity} Pa·s")
     diameter=float(input("\nEnter the diameter of the pipe (m): "))

@@ -1,9 +1,9 @@
 from calculators.reynolds import reynolds_calculator
 from calculators.pump_head import pump_calculator
 while True:
-    print("=" * 40)
-    print("Welcome to the Chemical Engineering Toolbox")
-    print("=" * 40)
+    print("=" * 100)
+    print("Welcome to my Chemical Engineering Toolbox")
+    print("=" * 100)
     choice = input("\nSelect a calculator:\n1. Reynolds Number Calculator\n2. Pump Head Calculator\n\nEnter your choice (1 or 2): ").strip().lower()
     match choice:
         case "1":
