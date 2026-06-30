@@ -1,3 +1,4 @@
+from utils.input_helpers import get_float
 FLUIDS = {
         "1": {
             "name": "water",
@@ -26,16 +27,20 @@ def reynolds_calculator():
         viscosity=selected["viscosity"]
     elif fluid == "4":
         name="Custom Fluid"
-        density=float(input("Enter the density of the fluid (kg/m^3): "))
-        viscosity=float(input("Enter the viscosity of the fluid (Pa·s): "))
+        try:
+            density=get_float("Enter the density of the fluid (kg/m^3): ")
+            viscosity=get_float("Enter the viscosity of the fluid (Pa·s): ")
+        except ValueError:
+            print("\nInvalid input. Please enter numeric values.")
+            return
     else:
         print("Invalid fluid name. Please enter '1', '2', '3', or '4'.")
         return     
     print("\nSelected fluid:", name)
     print(f"\nDensity: {density} kg/m^3")
     print(f"\nViscosity: {viscosity} Pa·s")
-    diameter=float(input("\nEnter the diameter of the pipe (m): "))
-    velocity=float(input("\nEnter the velocity of the fluid (m/s): "))
+    diameter=get_float("\nEnter the diameter of the pipe (m): ")
+    velocity=get_float("\nEnter the velocity of the fluid (m/s): ")
     reynolds_number=(density*velocity*diameter)/viscosity
     print(f"\nThe Reynolds number is: {reynolds_number:.2f}")
     if reynolds_number < 2000:
