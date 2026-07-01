@@ -49,3 +49,5 @@ def reynolds_calculator():
         print("The flow is transitional.")
     else:
         print("The flow is turbulent.")
+    
+    return reynolds_number
