@@ -1,5 +1,2 @@
-from datetime import datetime
-
-now = datetime.now()
-
-print(now)
+with open("tests.txt", "w") as file:
+    file.write("Hello, World!")
