@@ -45,3 +45,19 @@ def save_history():
             line = f"{entry['date']},{entry['time']},{entry['calculator']},{entry['result']}\n"
             file.write(line)
     print("\nHistory saved successfully.")
+def load_history():
+    try:
+        with open("history.csv", "r") as file:
+            next(file)
+            for line in file:
+                parts=line.strip().split(",")
+                history.append(
+                    {
+                        "date": parts[0],
+                        "time": parts[1],
+                        "calculator": parts[2],
+                        "result": parts[3]
+                    }
+                )
+    except FileNotFoundError:
+        return

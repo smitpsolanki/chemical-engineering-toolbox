@@ -1,14 +1,15 @@
-from history import add_history, save_history, show_history, clear_history
+from history import add_history, save_history, show_history, clear_history, load_history
 from calculators.reynolds import reynolds_calculator
 from calculators.pump_head import pump_calculator
 from config import APP_NAME, VERSION, AUTHOR, LINE_WIDTH
+load_history()
 while True:
     print("=" * LINE_WIDTH)
     print(APP_NAME.center(LINE_WIDTH))
     print(f"Version: {VERSION}".center(LINE_WIDTH))
     print(f"Developed by: {AUTHOR}".center(LINE_WIDTH))
     print("=" * LINE_WIDTH)
-    choice = input("\nSelect a calculator:\n1. Reynolds Number Calculator\n2. Pump Head Calculator\n3. Show History\n4. Clear History\n5. Save History\n6. Exit\n\nEnter your choice (1-6): ").strip().lower()
+    choice = input("\nSelect a calculator:\n1. Reynolds Number Calculator\n2. Pump Head Calculator\n3. Show History\n4. Clear History\n5. Exit\n\nEnter your choice (1-5): ").strip().lower()
     match choice:
         case "1":
             result=reynolds_calculator()
@@ -25,7 +26,6 @@ while True:
                 print("\nHistory not cleared.")
         case "5":
             save_history()
-        case "6":
             print("\nThank you for using the Chemical Engineering Toolbox. Goodbye!\n")
             break
         case _:
