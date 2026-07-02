@@ -1,7 +1,8 @@
+from utils.input_helpers import get_float
 def pump_calculator():
     print("\nPump Head Calculator")
-    pressure_drop = float(input("Enter the pressure drop (Pa): "))
-    density = float(input("Enter the density of the fluid (kg/m^3): "))
+    pressure_drop = get_float("\nEnter the pressure drop across the pump (Pa): ")
+    density = get_float("\nEnter the density of the fluid (kg/m^3): ")
     pump_head = pressure_drop / (density * 9.81)
     print("\nUsing equation:")
     print("\nHead = Pressure Drop / (Density × Gravity)")
