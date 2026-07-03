@@ -1,117 +1,99 @@
-# 🧪 Chemical Engineering Toolbox
+# Chemical Engineering Toolbox
 
-A Python-based toolbox designed to perform common Chemical Engineering calculations quickly and accurately.
+A modular Python-based toolbox developed for common Chemical Engineering calculations.
 
-This project is built as a learning journey in Python while following good software engineering practices such as modular programming, clean architecture, version control, and reusable code.
-
----
-
-## ✨ Features
+## Features
 
 - Reynolds Number Calculator
 - Pump Head Calculator
-- Input Validation
+- Pipe Velocity Calculator
 - Calculation History
-- Clear History
-- Professional Console Interface
-- Configuration System
+- Automatic History Save & Load
+- CSV History Export
+- Robust Input Validation
+- Modular Project Structure
+- Reusable Geometry Utilities
 
----
-
-## 📂 Project Structure
-
-```
-ChE Toolbox/
-│
-├── main.py                 # Main application
-├── config.py               # Application configuration
-├── history.py              # History management
-├── README.md
-├── CHANGELOG.md
+Chemical Engineering Toolbox/
 │
 ├── calculators/
+│   ├── pump_head.py
 │   ├── reynolds.py
-│   └── pump_head.py
+│   └── pipe_velocity.py
 │
-└── utils/
-    └── input_helpers.py
+├── utils/
+│   ├── geometry.py
+│   ├── input_helper.py
+│   └── validation.py
+│
+├── config.py
+├── history.py
+├── history.csv
+├── main.py
+├── README.md
+└── CHANGELOG.md
+
+## Current Calculators
+
+### Reynolds Number Calculator
+Calculates the Reynolds number of a fluid flowing through a pipe and classifies the flow regime as:
+- Laminar
+- Transitional
+- Turbulent
+
+### Pump Head Calculator
+Calculates the required pump head from pressure drop and fluid density.
+
+### Pipe Velocity Calculator
+Calculates the average fluid velocity using volumetric flow rate and pipe diameter.
+
+## Highlights
+
+- Built using Python
+- Modular architecture for easy expansion
+- Reusable utility modules
+- Automatic calculation history
+- CSV history persistence
+- User-friendly console interface
+- Robust input validation
+
+## Requirements
+
+- Python 3.10 or later
+
+## How to Run
+
+Clone the repository:
+
+```bash
+git clone https://github.com/smitpsolanki/chemical-engineering-toolbox.git
 ```
 
----
+Go to the project folder:
 
-## 🚀 Getting Started
+```bash
+cd chemical-engineering-toolbox
+```
 
-### Requirements
-
-- Python 3.13 or later
-
-### Run the application
+Run the application:
 
 ```bash
 python main.py
 ```
 
----
+## Current Version
 
-## 📋 Current Features
+**v0.8**
 
-✔ Reynolds Number Calculator
+## Future Plans
 
-✔ Pump Head Calculator
-
-✔ Input Validation
-
-✔ Calculation History
-
-✔ Clear History
-
-✔ Professional Console Interface
-
----
-
-## 🛣️ Roadmap
-
-### Version 0.7
-- Save History to CSV
-- Load History
-- Date & Time for Calculations
-
-### Version 0.8
+- Universal Unit Conversion System
+- Pressure Drop Calculator
 - Pump Power Calculator
-- Pipe Velocity Calculator
-- Heat Duty Calculator
-- Unit Converter
+- Heat Exchanger Utilities
+- Pipe Flow Utilities
+- Additional Chemical Engineering Calculators
 
-### Version 0.9
-- Better UI
-- Help Menu
-- Calculator Categories
-
-### Version 1.0
-- Desktop GUI
-- Windows Executable
-- Improved User Experience
-
----
-
-## 🛠 Technologies Used
-
-- Python 3
-- Git
-- VS Code
-
----
-
-## 👨‍💻 Author
+## Author
 
 **Smit Solanki**
-
-Chemical Engineering Student
-
-SVNIT Surat
-
----
-
-## 📄 License
-
-This project is developed for learning purposes.

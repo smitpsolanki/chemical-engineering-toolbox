@@ -35,10 +35,7 @@ def clear_history():
         return
     history.clear()
     print("\nHistory cleared successfully.")
-def save_history():
-    if not history:
-        print("\nNo history available to save.")
-        return
+def save_history(): 
     with open("history.csv", "w") as file:
         file.write("Date,Time,Calculator,Result\n")
         for entry in history:

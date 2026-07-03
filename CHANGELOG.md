@@ -1,72 +1,91 @@
 # Changelog
 
-All notable changes to this project will be documented here.
+All notable changes to this project will be documented in this file.
+
+## v0.8 - Pipe Velocity Calculator
+
+### Added
+- Added Pipe Velocity Calculator.
+- Added `geometry.py` utility module.
+- Added reusable `calculate_pipe_area()` function.
+- Added `get_positive_float()` validation function.
+- Improved input validation across calculators.
+
+### Fixed
+- Fixed history persistence after clearing history.
+- History file is now correctly overwritten when history is empty.
 
 ---
 
-## [0.6] - 2026-07-02
+## v0.7 - Persistent History Update
 
 ### Added
 
-- Configuration system (`config.py`)
-- Professional startup banner
-- Numbered calculation history
-- Clear history feature
-- Confirmation before clearing history
-- Application constants
+- Automatic loading of history from `history.csv` at startup.
+- Automatic saving of history when exiting the application.
+- CSV export support for calculation history.
+- Date and time logging for every calculation.
 
-### Changed
+### Improved
 
-- Improved project structure
-- Replaced hardcoded values with constants
-- Improved user interface
+- Cleaner project architecture.
+- Better user experience through automatic history persistence.
+- History entries now include calculator name, date, time, and result.
 
 ### Fixed
 
-- Fixed history clearing logic
+- Correct timestamp is now recorded for each calculation.
+- Improved history management and file handling.
 
 ---
 
-## [0.5]
+## v0.6 - History Enhancement
 
 ### Added
 
-- Calculation history
-- Generic `add_history()` function
-- `show_history()` function
+- Date and time support for history.
+- Better history display formatting.
 
 ---
 
-## [0.4]
+## v0.5 - History Management
 
 ### Added
 
-- Input validation
-- `get_float()` helper function
-- Exception handling
+- Show calculation history.
+- Clear history functionality.
 
 ---
 
-## [0.3]
+## v0.4 - Project Organization
 
 ### Added
 
-- Modular project structure
-- Separate calculator modules
-- Utility module
+- Modular project structure.
+- Configuration file (`config.py`).
+- Separate history module.
 
 ---
 
-## [0.2]
+## v0.3 - Pump Head Calculator
 
 ### Added
 
-- Pump Head Calculator
+- Pump Head Calculator.
 
 ---
 
-## [0.1]
+## v0.2 - Reynolds Number Calculator
 
-### Initial Release
+### Added
 
-- Reynolds Number Calculator
+- Reynolds Number Calculator.
+
+---
+
+## v0.1 - Initial Release
+
+### Added
+
+- Initial project structure.
+- Main application menu.
