@@ -3,6 +3,48 @@
 All notable changes to this project will be documented in this file.
 
 ---
+## [v0.9.1] - 2026-07-03
+
+###  Added
+
+#### Presentation Framework
+- Added `formatter.py`
+- Added reusable `print_header()`
+- Added reusable `print_section()`
+- Added reusable `print_result()`
+- Added reusable `print_paragraph()`
+- Added reusable `print_dictionary()`
+- Added reusable `print_footer()`
+
+#### Educational Resources
+- Added educational resources for Reynolds Number
+- Added educational resources for Pump Head
+- Added educational resources for Pipe Velocity
+
+#### Educational Content
+- Formula Used
+- Engineering Interpretation
+- Engineering Tips
+- Typical Operating Ranges
+- Industrial Applications
+- Common Mistakes
+
+### Improved
+
+- Reynolds Number Calculator redesigned with educational output.
+- Pump Head Calculator redesigned with educational output.
+- Pipe Velocity Calculator redesigned with educational output.
+- Improved readability with professional report formatting.
+- Enhanced console user experience.
+
+### Refactored
+
+- Separated engineering calculations from educational content.
+- Introduced presentation layer for output formatting.
+- Improved modular project architecture.
+- Increased code reusability through formatter utilities.
+
+---
 
 ## [v0.9] - 2026-07-03
 

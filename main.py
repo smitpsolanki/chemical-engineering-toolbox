@@ -6,6 +6,7 @@ from config import APP_NAME, VERSION, AUTHOR, LINE_WIDTH
 
 load_history()
 while True:
+    print()
     print("=" * LINE_WIDTH)
     print(APP_NAME.center(LINE_WIDTH))
     print(f"Version: {VERSION}".center(LINE_WIDTH))

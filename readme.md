@@ -1,39 +1,68 @@
 # Chemical Engineering Toolbox
 
-A modular Python-based toolbox developed for common Chemical Engineering calculations.
+> **An open-source study and calculation companion for Chemical Engineering students.**
 
 ## Features
 
+### Engineering Calculators
 - Reynolds Number Calculator
 - Pump Head Calculator
 - Pipe Velocity Calculator
-- Multiple Unit Support
-- Automatic Unit Conversion
-- Calculation History
-- Automatic History Save & Load
-- CSV History Export
+
+### Educational Features
+- Formula Used
+- Engineering Interpretation
+- Engineering Tips
+- Typical Operating Ranges
+- Industrial Applications
+- Common Mistakes
+
+### Core Features
+- Universal Unit Conversion
 - Robust Input Validation
-- Modular Utility Functions
+- Professional Formatted Output
+- Persistent Calculation History
+- CSV History Storage
+- Modular Architecture
+- Reusable Utility Modules
+
+### Utility Modules
+- Validation Utilities
+- Unit Conversion Utilities
+- Geometry Utilities
+- Input Helper Utilities
+- Formatter Utilities
 
 ## Project Structure
 
 ```text
 Chemical Engineering Toolbox/
+│
 ├── calculators/
 │   ├── pipe_velocity.py
 │   ├── pump_head.py
 │   └── reynolds.py
+│
+├── resources/
+│   ├── dimensionless_numbers/
+│   │   └── reynolds.py
+│   └── fluid_mechanics/
+│       ├── pipe_velocity.py
+│       └── pump_head.py
+│
 ├── utils/
+│   ├── formatter.py
 │   ├── geometry.py
 │   ├── input_helper.py
 │   ├── units.py
 │   └── validation.py
-├── CHANGELOG.md
-├── README.md
+│
 ├── config.py
-├── history.csv
 ├── history.py
-└── main.py
+├── history.csv
+├── main.py
+├── README.md
+└── CHANGELOG.md
 ```
 
 ## Current Calculators
@@ -86,16 +115,20 @@ python main.py
 
 ## Current Version
 
-**v0.9**
+**v0.9.1**
 
-## Future Plans
+## Project Vision
 
-- Universal Unit Conversion System
-- Pressure Drop Calculator
-- Pump Power Calculator
-- Heat Exchanger Utilities
-- Pipe Flow Utilities
-- Additional Chemical Engineering Calculators
+Chemical Engineering Toolbox is an open-source study and calculation companion
+designed specifically for Chemical Engineering students.
+
+The objective is not only to perform engineering calculations but also to help
+students understand the concepts behind them through engineering explanations,
+practical tips, typical operating ranges, industrial applications, and common
+mistakes.
+
+The project is being developed incrementally with a modular architecture,
+making it easy to maintain, extend, and learn from.
 
 ## Author
 

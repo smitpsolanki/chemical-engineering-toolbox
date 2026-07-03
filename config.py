@@ -1,4 +1,4 @@
 APP_NAME = "Chemical Engineering Toolbox"
-VERSION = "0.9"
+VERSION = "0.9.1"
 AUTHOR = "Smit Solanki"
-LINE_WIDTH = 60
+LINE_WIDTH = 100
