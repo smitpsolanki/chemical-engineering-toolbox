@@ -7,31 +7,34 @@ A modular Python-based toolbox developed for common Chemical Engineering calcula
 - Reynolds Number Calculator
 - Pump Head Calculator
 - Pipe Velocity Calculator
+- Multiple Unit Support
+- Automatic Unit Conversion
 - Calculation History
 - Automatic History Save & Load
 - CSV History Export
 - Robust Input Validation
-- Modular Project Structure
-- Reusable Geometry Utilities
+- Modular Utility Functions
 
+## Project Structure
+
+```text
 Chemical Engineering Toolbox/
-│
 ├── calculators/
+│   ├── pipe_velocity.py
 │   ├── pump_head.py
-│   ├── reynolds.py
-│   └── pipe_velocity.py
-│
+│   └── reynolds.py
 ├── utils/
 │   ├── geometry.py
 │   ├── input_helper.py
+│   ├── units.py
 │   └── validation.py
-│
-├── config.py
-├── history.py
-├── history.csv
-├── main.py
+├── CHANGELOG.md
 ├── README.md
-└── CHANGELOG.md
+├── config.py
+├── history.csv
+├── history.py
+└── main.py
+```
 
 ## Current Calculators
 
@@ -83,7 +86,7 @@ python main.py
 
 ## Current Version
 
-**v0.8**
+**v0.9**
 
 ## Future Plans
 

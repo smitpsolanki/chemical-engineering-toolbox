@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file.
 
+---
+
+## [v0.9] - 2026-07-03
+
+### Added
+- Added universal unit conversion framework.
+- Added `units.py` utility module.
+- Added reusable `convert_flow_rate()` function.
+- Added reusable `convert_length()` function.
+- Added reusable `convert_pressure()` function.
+- Added reusable `select_option()` helper for menu selections.
+- Added reusable `get_positive_integer()` validation function.
+
+### Improved
+- Updated Reynolds Number Calculator to support multiple input units.
+- Updated Pump Head Calculator to support multiple input units.
+- Updated Pipe Velocity Calculator to support multiple input units.
+- Improved code reusability through shared unit conversion utilities.
+- Enhanced modular architecture.
+
+### Fixed
+- Minor improvements to input validation and menu handling.
+
+---
+
 ## v0.8 - Pipe Velocity Calculator
 
 ### Added

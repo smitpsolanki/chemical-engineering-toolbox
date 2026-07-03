@@ -1,4 +1,5 @@
-from utils.input_helpers import get_float
+from utils.input_helpers import get_float, select_option
+from utils.units import convert_density, convert_length, convert_velocity, convert_viscosity
 from utils.validation import get_positive_float
 FLUIDS = {
         "1": {
@@ -29,8 +30,12 @@ def reynolds_calculator():
     elif fluid == "4":
         name="Custom Fluid"
         try:
-            density=get_positive_float("Enter the density of the fluid (kg/m^3): ")
+            density=get_positive_float("Enter the density of the fluid: ")
+            density_unit=select_option("Select the unit for density:", ["kg/m3", "g/cm3", "lb/ft3"])
+            density=convert_density(density, density_unit)
             viscosity=get_positive_float("Enter the viscosity of the fluid (Pa·s): ")
+            viscosity_unit=select_option("Select the unit for viscosity:", ["Pa·s", "cP"])
+            viscosity=convert_viscosity(viscosity, viscosity_unit)
         except ValueError:
             print("\nInvalid input. Please enter numeric values.")
             return
@@ -41,7 +46,11 @@ def reynolds_calculator():
     print(f"\nDensity: {density} kg/m^3")
     print(f"\nViscosity: {viscosity} Pa·s")
     diameter=get_positive_float("\nEnter the diameter of the pipe (m): ")
+    diameter_unit=select_option("Select the unit for diameter:", ["m", "cm", "mm", "in", "ft"])
+    diameter=convert_length(diameter, diameter_unit)
     velocity=get_positive_float("\nEnter the velocity of the fluid (m/s): ")
+    velocity_unit=select_option("Select the unit for velocity:", ["m/s", "cm/s", "mm/s", "in/s", "ft/s"])
+    velocity=convert_velocity(velocity, velocity_unit)
     reynolds_number=(density*velocity*diameter)/viscosity
     print(f"\nThe Reynolds number is: {reynolds_number:.2f}")
     if reynolds_number < 2000:
